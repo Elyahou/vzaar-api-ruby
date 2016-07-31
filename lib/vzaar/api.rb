@@ -34,6 +34,10 @@ module Vzaar
       Request::DeleteVideo.new(conn, opts.merge(video_id: video_id)).execute
     end
 
+    def restore_video(video_id, opts={})
+      Request::RestoreVideo.new(conn, opts.merge(video_id: video_id)).execute
+    end
+
     def edit_video(video_id, opts={})
       Request::EditVideo.new(conn, opts.merge(video_id: video_id)).execute
     end
